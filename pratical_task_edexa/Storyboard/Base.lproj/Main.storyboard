@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DcE-9b-cwE">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="pratical_task_edexa" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TDu-k1-GhA">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="lOY-LT-uhe"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Kvt-6V-tTX"/>
+                                </connections>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Vlb-X3-4zp">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="sru-mm-mnz"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="TDu-k1-GhA" firstAttribute="top" secondItem="Vlb-X3-4zp" secondAttribute="top" constant="44" id="DzF-1n-ce7"/>
+                            <constraint firstItem="TDu-k1-GhA" firstAttribute="top" secondItem="Vlb-X3-4zp" secondAttribute="bottom" id="TYg-h3-cDy"/>
+                            <constraint firstItem="TDu-k1-GhA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UFF-Zp-zXq"/>
+                            <constraint firstItem="Vlb-X3-4zp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="UMw-ZX-BPh"/>
+                            <constraint firstItem="Vlb-X3-4zp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VZ6-gM-YDP"/>
+                            <constraint firstItem="TDu-k1-GhA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="VgW-Zp-rlT"/>
+                            <constraint firstItem="TDu-k1-GhA" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Xjx-qa-Pvz"/>
+                            <constraint firstItem="Vlb-X3-4zp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fwn-IO-tkQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5dj-Iy-hxn"/>
+                    <connections>
+                        <outlet property="citiesTableView" destination="TDu-k1-GhA" id="LcE-E6-dgU"/>
+                        <outlet property="searchBar" destination="Vlb-X3-4zp" id="0Ly-px-wng"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.2" y="74.212893553223395"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jqQ-rT-kEB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="DcE-9b-cwE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nmT-bQ-AGx">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="w1I-j1-haC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KCj-nR-05e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="75"/>
+        </scene>
+    </scenes>
+</document>
